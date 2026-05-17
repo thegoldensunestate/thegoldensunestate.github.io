@@ -77,6 +77,10 @@ nav.scrolled .hb span{background:#F5EDD8;}
 }
 .brand-tagline{font-family:'Cormorant Garamond',serif;font-size:clamp(.92rem,1.9vw,1.18rem);font-weight:300;font-style:italic;color:rgba(0,35,102,.48);letter-spacing:.02em;margin-top:.5rem;}
 .brand-sub{font-size:clamp(.56rem,1.1vw,.66rem);letter-spacing:.28em;text-transform:uppercase;color:rgba(212,160,18,.72);font-weight:500;margin-top:.35rem;}
+.hero-story{margin-top:1.4rem;line-height:1.25;animation:fadeUpIn 1s .55s ease both;}
+.hero-story-top{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.8vw,2.6rem);font-weight:300;letter-spacing:.04em;color:var(--navy);display:block;}
+.hero-story-gold{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4.2vw,3rem);font-weight:400;font-style:italic;display:block;margin-top:.15rem;background:linear-gradient(90deg,#C8880A 0%,#F0B800 25%,#FFD840 45%,#F0A800 60%,#D4920A 80%,#F5CC00 100%);background-size:200% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:goldFlow 4s ease-in-out infinite;}
+@keyframes goldFlow{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
 
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;animation:fadeUpIn 1s .62s ease both;}
 .btn-p{background:var(--navy);color:#fff;padding:.82rem 2.2rem;border:none;cursor:pointer;font-family:'Jost',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:all .3s;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));}
@@ -340,13 +344,22 @@ footer{background:#00081f;padding:2.8rem 0 1.8rem;border-top:1px solid rgba(212,
         <path d="M 1060 430 Q 1130 424 1190 430"><animate attributeName="d" dur="4.2s" repeatCount="indefinite" values="M 1060 430 Q 1130 424 1190 430;M 1060 433 Q 1130 427 1190 433;M 1060 430 Q 1130 424 1190 430"/></path>
       </g>
 
-      <!-- Sailboats -->
-      <g opacity=".55">
-        <path d="M 670 390 L 674 358 L 690 390 Z" fill="#C8C0B0"/>
-        <path d="M 674 390 L 672 362 L 668 390 Z" fill="#B8B0A0"/>
-        <line x1="674" y1="390" x2="674" y2="356" stroke="#A09888" stroke-width="1"/>
-        <path d="M 1110 395 L 1113 368 L 1126 395 Z" fill="#C8C0B0"/>
-        <line x1="1113" y1="395" x2="1113" y2="366" stroke="#A09888" stroke-width="1"/>
+      <!-- Sailboats — clustered near Opera House -->
+      <g opacity=".88">
+        <!-- Boat 1 — closest to Opera House, larger -->
+        <path d="M 700 390 L 706 348 L 728 390 Z" fill="#D8D0BC"/>
+        <path d="M 706 390 L 703 353 L 696 390 Z" fill="#C8C0AA"/>
+        <line x1="706" y1="390" x2="706" y2="345" stroke="#908878" stroke-width="1.4"/>
+        <line x1="700" y1="390" x2="728" y2="390" stroke="#A09888" stroke-width="1.2"/>
+        <!-- Boat 2 — slightly further left, medium -->
+        <path d="M 648 393 L 653 360 L 671 393 Z" fill="#D0C8B4"/>
+        <path d="M 653 393 L 650 363 L 644 393 Z" fill="#C0B8A4"/>
+        <line x1="653" y1="393" x2="653" y2="357" stroke="#908878" stroke-width="1.2"/>
+        <line x1="648" y1="393" x2="671" y2="393" stroke="#A09888" stroke-width="1"/>
+        <!-- Boat 3 — small, tucked just left of Opera House base -->
+        <path d="M 736 391 L 740 366 L 752 391 Z" fill="#C8C2B0"/>
+        <line x1="740" y1="391" x2="740" y2="363" stroke="#908878" stroke-width="1"/>
+        <line x1="736" y1="391" x2="752" y2="391" stroke="#A09888" stroke-width=".9"/>
       </g>
     </svg>
   </div>
@@ -448,6 +461,10 @@ footer{background:#00081f;padding:2.8rem 0 1.8rem;border-top:1px solid rgba(212,
       </div>
       <div class="brand-tagline">Real Estate &nbsp;&middot;&nbsp; Sydney, Australia</div>
       <div class="brand-sub">Brilliance in Every Property &nbsp;&middot;&nbsp; Family at Heart</div>
+      <div class="hero-story">
+        <span class="hero-story-top">Where Every Home Tells</span>
+        <span class="hero-story-gold">a Golden Story</span>
+      </div>
     </div>
 
     <div class="hero-btns">
